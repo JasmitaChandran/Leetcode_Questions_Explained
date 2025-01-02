@@ -1,4 +1,3 @@
-
 class Solution {
     public int reverse(int x) {
         // Step 1: Initialize the reversed number to 0
