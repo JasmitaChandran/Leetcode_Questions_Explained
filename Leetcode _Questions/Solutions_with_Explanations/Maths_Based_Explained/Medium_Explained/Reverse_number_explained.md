@@ -1,11 +1,15 @@
-// Question
+# Question
 
-//Intuition
+<img width="1339" alt="image" src="https://github.com/user-attachments/assets/e886989f-1227-4282-a3bd-cbca10be7a00" />
+
+
+# Intuition
 
 The logic:
 
 Ideally,to reverse a no, this code is enough :
 
+```java
 class Solution {
     public int reverse(int x) {
         int revNum = 0;
@@ -19,13 +23,18 @@ class Solution {
     }
 }
 
+```
+
+
 But we need to add 2 more conditions:
 
 - Handle Negative nos
 - Handle overflow / underflow conditions 
 
-
-while(x!=0)  --> to include negative digits as well while reversing the no.
+```java
+while(x!=0) 
+```
+--> to include negative digits as well while reversing the no.
 
 the question says, 
 
@@ -42,20 +51,22 @@ Now moving further,
 
 we have 2 conditions, first is overflow condition and second one is to manage underflow condition.
 
+```java
 //overflow
  if(revNum > Integer.MAX_VALUE/10 || (revNum == Integer.MAX_VALUE/10 && lastdigit > 7))
 return 0;
-
+```
 It says to first compare the revNum is more than integer max value (214748364) deleted 7 bcoz of Integer.MAX_VALUE/10.
 
 Or revNum is equal to integer max value (214748364) deleted 7 bcoz of Integer.MAX_VALUE/10.
 
 Last digit should be more than 7 -> bcoz if it is more than 7, it is out of range
 
+```java
 //underflow
  if(revNum < Integer.MIN_VALUE/10 || (revNum == Integer.MIN_VALUE/10 && lastdigit < -8))
  return 0;
-
+```
 
 It says to first compare the revNum is less than integer min value (-214748364) deleted 8 bcoz of Integer.MIN_VALUE/10.
 
@@ -65,34 +76,35 @@ Last digit should be less than 8 -> bcoz if it is less than 8, it is out of rang
 
 
 Reverse no logic ->
+
+```java
  revNum = revNum * 10 + lastdigit;
+```
 
- Suppose no is 7789,
+Suppose the number is `7789`, the steps for reversing it are as follows:
 
- then 
+- `0 * 10 + 9 = 9`
+- `9 * 10 + 8 = 98`
+- `98 * 10 + 7 = 987`
+- `987 * 10 + 7 = 9877`
 
- 0 * 10 + 9 = 9
- 9 * 10 + 8 = 9
- 98 * 10 + 7 = 9
- 987 * 10 + 7 = 9
+### Breakdown:
+- Initially, `revNum = 0`, so `0 * 10 + 9 = 9`
+- Then, `revNum = 9`, so `9 * 10 + 8 = 98`
+- Next, `revNum = 98`, so `98 * 10 + 7 = 987`
+- Finally, `revNum = 987`, so `987 * 10 + 7 = 9877`
 
-Multiplying it by 10, so to add last digit at unit place.
-
-90
-+8
----
-980
-+ 7
----
-9870
-+  7
-----
-9877
-----
+### Visual Representation:
+<img width="83" alt="image" src="https://github.com/user-attachments/assets/8fca545f-25c5-4fb4-8120-db62fba80cff" />
 
 
 Code Explanation Step by Step:
 
+<img width="853" alt="image" src="https://github.com/user-attachments/assets/2fb9920f-2665-4727-bf29-11384a27604d" />
+<img width="931" alt="image" src="https://github.com/user-attachments/assets/b2f45e53-5cae-4b70-b790-68d71643ef1c" />
+
+
+```java
 //Solution
 
 class Solution {
