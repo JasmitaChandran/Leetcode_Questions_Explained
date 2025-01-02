@@ -1,6 +1,3 @@
-
-// Solution
-
 class Solution {
     public boolean isPalindrome(int x) {
         // Step 1: Negative numbers cannot be palindromes
@@ -30,5 +27,3 @@ class Solution {
         return revNum == temp; // Return true if they are the same, otherwise false
     }
 }
-
-
