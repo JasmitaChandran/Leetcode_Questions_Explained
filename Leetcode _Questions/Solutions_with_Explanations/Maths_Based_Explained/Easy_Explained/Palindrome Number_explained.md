@@ -1,5 +1,7 @@
 //Question - Palindrome Number
 
+<img width="1095" alt="Screenshot 2025-01-02 at 10 22 38 PM" src="https://github.com/user-attachments/assets/498fc1ad-2df0-4ac6-9280-d6f5d802583e" />
+
 // Intuition
 
 /*
@@ -35,13 +37,12 @@ return revNum == temp;
 
 // Solution
 
-class Solution {
+        class Solution {
     public boolean isPalindrome(int x) {
         // Step 1: Negative numbers cannot be palindromes
         if (x < 0) {
             return false; // Negative numbers fail the palindrome condition
         }
-
         // Step 2: Store the original number in a temporary variable
         int temp = x;
 
@@ -63,6 +64,6 @@ class Solution {
         // Step 5: Compare the reversed number with the original number
         return revNum == temp; // Return true if they are the same, otherwise false
     }
-}
+    }
 
 
