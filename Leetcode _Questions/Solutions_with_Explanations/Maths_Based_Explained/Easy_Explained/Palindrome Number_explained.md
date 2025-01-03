@@ -1,8 +1,8 @@
-//Question - Palindrome Number
+# Question - Palindrome Number
 
 <img width="1095" alt="Screenshot 2025-01-02 at 10 22 38 PM" src="https://github.com/user-attachments/assets/498fc1ad-2df0-4ac6-9280-d6f5d802583e" />
 
-// Intuition
+# Intuition
 
 /*
 
@@ -35,7 +35,7 @@ return revNum == temp;
 
 */
 
-// Solution
+# Solution
 
         class Solution {
     public boolean isPalindrome(int x) {
