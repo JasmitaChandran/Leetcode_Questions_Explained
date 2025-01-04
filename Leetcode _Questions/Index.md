@@ -1,4 +1,4 @@
-Index
+# Index
 
 [1. Palindrome Number](https://github.com/JasmitaChandran/Leetcode_Questions_Explained/blob/main/Leetcode%20_Questions/Solutions_with_Explanations/Maths_Based_Explained/Easy_Explained/Palindrome%20Number_explained.md)
 
